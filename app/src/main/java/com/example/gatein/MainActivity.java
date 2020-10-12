@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String username, String password){
         if((username.equals("Admin"))&&(password.equals("mdp"))){
-            Intent intent = new Intent(this, Selection.class);
+            Intent intent = new Intent(this, SelectionGatein.class);
             startActivity(intent);
         }
         else{

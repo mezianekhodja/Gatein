@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Selection"
-    android:background="@color/colorLogo">
-
+    tools:context=".SelectionGatein">
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
@@ -24,7 +22,7 @@
             android:layout_marginTop="150dp"
             android:background="@color/colorYellow"
             android:textColor="@color/colorLogo"
-        />
+            />
         <Button
             android:id="@+id/button2"
             android:layout_width="150dp"

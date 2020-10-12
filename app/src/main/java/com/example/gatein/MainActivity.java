@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             counter--;
-            info.setText("nombre d'essais restants = "+String.valueOf(counter));
+            info.setText("nombre d'essais restants : "+String.valueOf(counter));
         }
         if(counter == 0){
             login.setEnabled(false);

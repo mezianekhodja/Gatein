@@ -17,10 +17,9 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Ouvrir la porte"
-            android:layout_weight="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:background="@color/colorYellow"
@@ -31,7 +30,6 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Historique"
-            android:layout_weight="wrap_content"
             android:layout_gravity="center"
             android:background="@color/colorYellow"
             android:textColor="@color/colorLogo"

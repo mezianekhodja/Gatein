@@ -4,6 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Message">
+    tools:context=".Message"
+    android:background="@color/colorLogo">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="65dp"
+        android:layout_height="61dp"
+        android:background="@color/colorYellow"
+        android:text="OK"
+        android:textColor="@color/colorLogo"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="246dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Saisissez le message d'entrée"
+        android:textColor="@color/colorWhite"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="297dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

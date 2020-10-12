@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorLogo">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -19,7 +20,8 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gatein by Abir, Blanche et Meziane, 2020" />
+            android:text="Gatein by Abir, Blanche et Meziane, 2020"
+            android:textColor="@color/colorWhite"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -31,7 +33,8 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Connectez vous" />
+            android:text="Connectez vous"
+            android:textColor="@color/colorWhite"/>
 
         <EditText
             android:id="@+id/editTextusername"
@@ -39,7 +42,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="username"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="@color/colorWhite"/>
 
         <EditText
             android:id="@+id/editTextpassword"
@@ -47,21 +51,24 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorWhite"/>
 
         <TextView
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre de tests restants : 5" />
+            android:text="Nombre de tests restants = 5"
+            android:textColor="@color/colorWhite" />
 
         <Button
             android:id="@+id/buttonlog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connexion"
-            android:textColor="@color/colorPrimary"
-            android:background="@color/colorLogo"/>
+            android:textColor="@color/colorLogo"
+            android:background="@color/colorYellow"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

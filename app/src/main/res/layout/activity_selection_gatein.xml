@@ -29,7 +29,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="200dp"
+            android:layout_margin="100dp"
             android:background="@color/colorYellow"
             android:text="Historique"
             android:textColor="@color/colorLogo"

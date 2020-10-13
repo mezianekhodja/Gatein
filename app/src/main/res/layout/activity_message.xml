@@ -15,7 +15,8 @@
         android:text="OK"
         android:textColor="@color/colorLogo"
         tools:layout_editor_absoluteX="297dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteY="297dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText1"
@@ -26,7 +27,8 @@
         android:text="Saisissez le message d'entrée"
         android:textColor="@color/colorWhite"
         tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="297dp" />
+        tools:layout_editor_absoluteY="297dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

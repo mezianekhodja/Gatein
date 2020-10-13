@@ -4,49 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Registration"
     android:background="@color/colorLogo">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gatein by Abir, Blanche et Meziane, 2020"
-            android:textColor="@color/colorWhite"/>
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="111dp"
             app:srcCompat="@drawable/gateinlogo" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Connectez vous"
-            android:textColor="@color/colorWhite"/>
-
         <EditText
-            android:id="@+id/editTextusername"
+            android:id="@+id/editTextRegusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="username"
+            android:hint="pseudo"
             android:inputType="textPersonName"
             android:textColorHint="@color/colorWhite"/>
 
         <EditText
-            android:id="@+id/editTextpassword"
+            android:id="@+id/editTextRegmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="adresse mail"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/colorWhite"/>
+
+        <EditText
+            android:id="@+id/editTextRegPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -54,28 +48,19 @@
             android:inputType="textPassword"
             android:textColorHint="@color/colorWhite"/>
 
-        <TextView
-            android:id="@+id/info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre de tests restants = 5"
-            android:textColor="@color/colorWhite" />
-
         <Button
-            android:id="@+id/buttonlog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Connexion"
-            android:textColor="@color/colorLogo"
-            android:background="@color/colorYellow"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:id="@+id/textViewregistration"
+            android:id="@+id/buttonReginscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="S'inscrire"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorLogo"
+            android:background="@color/colorYellow"/>
 
+        <TextView
+            android:id="@+id/textViewRegconnexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="déja membre?"
+            android:textColor="@color/colorWhite"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

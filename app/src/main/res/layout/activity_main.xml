@@ -8,8 +8,8 @@
     android:background="@color/colorLogo">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
@@ -17,20 +17,17 @@
 
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gatein by Abir, Blanche et Meziane, 2020"
             android:textColor="@color/colorWhite"/>
 
         <ImageView
-            android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="111dp"
             app:srcCompat="@drawable/gateinlogo" />
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connectez vous"

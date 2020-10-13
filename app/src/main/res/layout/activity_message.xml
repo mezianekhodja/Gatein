@@ -7,28 +7,38 @@
     tools:context=".Message"
     android:background="@color/colorLogo">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="65dp"
-        android:layout_height="61dp"
-        android:background="@color/colorYellow"
-        android:text="OK"
-        android:textColor="@color/colorLogo"
-        tools:layout_editor_absoluteX="297dp"
-        tools:layout_editor_absoluteY="297dp"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="246dp"
-        android:layout_height="62dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Saisissez le message d'entrée"
-        android:textColor="@color/colorWhite"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="297dp"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:layout_marginTop="100dp"
+            android:id="@+id/editTextmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Saisissez le message d'entrée ici"
+            android:textColor="@color/colorWhite"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/button_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:text="OK"
+            android:textColor="@color/colorLogo"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

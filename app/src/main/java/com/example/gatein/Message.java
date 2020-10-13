@@ -14,7 +14,7 @@ public class Message extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-        message=(EditText) findViewById(R.id.editText1);
-        ok=(Button) findViewById(R.id.button);
+        message=(EditText) findViewById(R.id.editTextmessage);
+        ok=(Button) findViewById(R.id.button_message);
     }
 }

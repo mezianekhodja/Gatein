@@ -25,7 +25,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="111dp"
-            app:srcCompat="@drawable/gateinlogo" />
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"

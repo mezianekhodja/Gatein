@@ -20,27 +20,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gatein by Abir, Blanche et Meziane, 2020"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="111dp"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connectez vous"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/editTextusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="username"
+            android:hint="mail"
             android:inputType="textPersonName"
-            android:textColorHint="@color/colorWhite"/>
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/editTextpassword"
@@ -49,14 +54,17 @@
             android:ems="10"
             android:hint="password"
             android:inputType="textPassword"
-            android:textColorHint="@color/colorWhite"/>
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre de tests restants = 5"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/buttonlog"
@@ -65,14 +73,27 @@
             android:text="Connexion"
             android:textColor="@color/colorLogo"
             android:background="@color/colorYellow"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/textViewregistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="S'inscrire"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:stateListAnimator="@null"
+            android:text="Mdp oublié? cliquez ici"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

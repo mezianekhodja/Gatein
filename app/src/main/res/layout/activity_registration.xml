@@ -18,7 +18,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="111dp"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/editTextRegusername"
@@ -27,7 +28,9 @@
             android:ems="10"
             android:hint="pseudo"
             android:inputType="textPersonName"
-            android:textColorHint="@color/colorWhite"/>
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/editTextRegmail"
@@ -36,7 +39,9 @@
             android:ems="10"
             android:hint="adresse mail"
             android:inputType="textPersonName"
-            android:textColorHint="@color/colorWhite"/>
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/editTextRegPassword"
@@ -45,15 +50,27 @@
             android:ems="10"
             android:hint="password"
             android:inputType="textPassword"
-            android:textColorHint="@color/colorWhite"/>
-
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="phone number"
+            android:background="@color/colorWhite"
+            android:textColorHint="@color/colorLogo"
+            android:layout_marginBottom="10dp"/>
         <Button
             android:id="@+id/buttonReginscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="S'inscrire"
             android:textColor="@color/colorLogo"
-            android:background="@color/colorYellow"/>
+            android:background="@color/colorYellow"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/textViewRegconnexion"

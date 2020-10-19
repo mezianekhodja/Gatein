@@ -117,7 +117,7 @@ public class Registration extends AppCompatActivity {
     private void sendUserdata(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(name, mail, phone);
+        UserProfile userProfile = new UserProfile(name, mail, phone, "acces non autorisé");
         myRef.setValue(userProfile);
     }
 }

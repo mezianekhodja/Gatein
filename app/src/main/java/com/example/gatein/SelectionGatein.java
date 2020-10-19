@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,13 @@ public class SelectionGatein extends AppCompatActivity {
         Ouvrir=(Button)findViewById(R.id.buttonOuvrir);
         Historique=(Button)findViewById(R.id.buttonHistorique);
         firebaseAuth = FirebaseAuth.getInstance();
+        Ouvrir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMessage();
+            }
+        });
+
     }
     public void openActivityConnexion() {
         Intent intent = new Intent(this, MainActivity.class);
@@ -37,6 +45,13 @@ public class SelectionGatein extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
         return true;
+    }
+
+    //ouvrir la page Message après la page selection
+    public void openMessage(){
+        Intent intent = new Intent(this, OuvrirMessage.class);
+        startActivity(intent);
+        SelectionGatein.this.finish();
     }
 
     public void openProfil() {

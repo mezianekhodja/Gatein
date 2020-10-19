@@ -25,6 +25,7 @@ public class UpdateProfile extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseUser firebaseUser;
+    String horaires;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class UpdateProfile extends AppCompatActivity {
                 UserProfile userProfile = snapshot.getValue(UserProfile.class);
                 username.setText(userProfile.getUserName());
                 userphone.setText(userProfile.getUserPhone());
+                horaires = userProfile.getUserHoraires();
             }
 
             @Override
@@ -54,13 +56,14 @@ public class UpdateProfile extends AppCompatActivity {
                 Toast.makeText(UpdateProfile.this, error.getCode(),Toast.LENGTH_SHORT).show();
             }
         });
+
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = username.getText().toString();
                 String phone = userphone.getText().toString();
 
-                UserProfile userProfile = new UserProfile(name,firebaseUser.getEmail(),phone);
+                UserProfile userProfile = new UserProfile(name,firebaseUser.getEmail(),phone,horaires);
 
                 databaseReference.setValue(userProfile);
                 openProfileActivity();

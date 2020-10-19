@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Message extends AppCompatActivity {
+public class OuvrirMessage extends AppCompatActivity {
     private EditText message;
     private Button ok;
     private FirebaseAuth firebaseAuth;
@@ -20,7 +20,7 @@ public class Message extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_message);
+        setContentView(R.layout.activity_ouvrir_message);
         message=(EditText) findViewById(R.id.editTextmessage);
         ok=(Button) findViewById(R.id.button_message);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -28,7 +28,7 @@ public class Message extends AppCompatActivity {
     public void openActivityConnexion() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        Message.this.finish();
+        OuvrirMessage.this.finish();
     }
     private void Logout() {
         firebaseAuth.signOut();
@@ -43,7 +43,12 @@ public class Message extends AppCompatActivity {
     public void openProfil() {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
-        Message.this.finish();
+        OuvrirMessage.this.finish();
+    }
+    public void openSelection() {
+        Intent intent = new Intent(this, SelectionGatein.class);
+        startActivity(intent);
+        OuvrirMessage.this.finish();
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -53,6 +58,9 @@ public class Message extends AppCompatActivity {
             }
             case R.id.profileMenu:{
                 openProfil();
+            }
+            case R.id.HomeMenu:{
+                openSelection();
             }
         }
         return super.onOptionsItemSelected(item);

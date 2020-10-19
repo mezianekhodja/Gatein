@@ -24,7 +24,7 @@ public class Profile extends AppCompatActivity {
 
     private Button button;
     private ImageView profilPic;
-    private TextView profileName, profileMail, profilePhone;
+    private TextView profileName, profileMail, profilePhone, profileHoraires;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
@@ -38,6 +38,7 @@ public class Profile extends AppCompatActivity {
         profileName = (TextView)findViewById((R.id.tvProfilename));
         profileMail = (TextView)findViewById((R.id.tvProfilemail));
         profilePhone = (TextView)findViewById((R.id.tvProfilephone));
+        profileHoraires = (TextView)findViewById((R.id.tvProfilehoraires));
 
         button = findViewById(R.id.buttonchangemdp);
         button.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +68,7 @@ public class Profile extends AppCompatActivity {
                 profileName.setText("Name = "+userProfile.getUserName());
                 profileMail.setText("Mail = "+userProfile.getUserEmail());
                 profilePhone.setText("Phone = "+userProfile.getUserPhone());
+                profileHoraires.setText("Horaires = "+userProfile.getUserHoraires());
             }
 
             @Override
@@ -107,6 +109,11 @@ public class Profile extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
+    public void openSelection() {
+        finish();
+        Intent intent = new Intent(this, SelectionGatein.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
@@ -115,6 +122,9 @@ public class Profile extends AppCompatActivity {
             }
             case R.id.profileMenu:{
                 openProfil();
+            }
+            case R.id.HomeMenu:{
+                openSelection();
             }
         }
         return super.onOptionsItemSelected(item);

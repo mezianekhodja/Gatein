@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     private void openRegPage(){
         Intent intent = new Intent(this, Registration.class);
         startActivity(intent);
+        MainActivity.this.finish();
     }
     private void openPF(){
         Intent intent = new Intent(this, PasswordActivity.class);

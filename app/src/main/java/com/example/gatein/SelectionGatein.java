@@ -30,6 +30,7 @@ public class SelectionGatein extends AppCompatActivity {
                 openMessage();
             }
         });
+
     }
     public void openActivityConnexion() {
         Intent intent = new Intent(this, MainActivity.class);

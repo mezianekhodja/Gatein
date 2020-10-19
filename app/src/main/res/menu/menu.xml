@@ -15,4 +15,11 @@
         app:showAsAction="never"
         android:title="Profil">
     </item>
+    <item
+        android:id="@+id/HomeMenu"
+        android:icon="@drawable/logo"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        android:title="Sélection">
+    </item>
 </menu>

@@ -45,6 +45,11 @@ public class Message extends AppCompatActivity {
         startActivity(intent);
         Message.this.finish();
     }
+    public void openSelection() {
+        Intent intent = new Intent(this, SelectionGatein.class);
+        startActivity(intent);
+        Message.this.finish();
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
@@ -53,6 +58,9 @@ public class Message extends AppCompatActivity {
             }
             case R.id.profileMenu:{
                 openProfil();
+            }
+            case R.id.HomeMenu:{
+                openSelection();
             }
         }
         return super.onOptionsItemSelected(item);

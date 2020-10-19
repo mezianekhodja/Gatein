@@ -88,6 +88,9 @@ public class PasswordActivity extends AppCompatActivity {
             case R.id.profileMenu:{
                 openProfil();
             }
+            case R.id.HomeMenu:{
+                openSelection();
+            }
         }
         return super.onOptionsItemSelected(item);
     }

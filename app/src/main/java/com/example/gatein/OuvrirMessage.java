@@ -20,7 +20,7 @@ public class OuvrirMessage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_message);
+        setContentView(R.layout.activity_ouvrir_message);
         message=(EditText) findViewById(R.id.editTextmessage);
         ok=(Button) findViewById(R.id.button_message);
         firebaseAuth = FirebaseAuth.getInstance();

@@ -7,35 +7,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SelectionGatein extends AppCompatActivity {
-    private Button Ouvrir;
-    private Button Historique;
+public class OuvrirMessage extends AppCompatActivity {
+    private EditText message;
+    private Button ok;
     private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection_gatein);
-        Ouvrir=(Button)findViewById(R.id.buttonOuvrir);
-        Historique=(Button)findViewById(R.id.buttonHistorique);
+        setContentView(R.layout.activity_message);
+        message=(EditText) findViewById(R.id.editTextmessage);
+        ok=(Button) findViewById(R.id.button_message);
         firebaseAuth = FirebaseAuth.getInstance();
-        Ouvrir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMessage();
-            }
-        });
-
     }
     public void openActivityConnexion() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        SelectionGatein.this.finish();
+        OuvrirMessage.this.finish();
     }
     private void Logout() {
         firebaseAuth.signOut();
@@ -47,17 +40,15 @@ public class SelectionGatein extends AppCompatActivity {
         return true;
     }
 
-    //ouvrir la page Message après la page selection
-    public void openMessage(){
-        Intent intent = new Intent(this, OuvrirMessage.class);
-        startActivity(intent);
-        SelectionGatein.this.finish();
-    }
-
     public void openProfil() {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
-        SelectionGatein.this.finish();
+        OuvrirMessage.this.finish();
+    }
+    public void openSelection() {
+        Intent intent = new Intent(this, SelectionGatein.class);
+        startActivity(intent);
+        OuvrirMessage.this.finish();
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -67,6 +58,9 @@ public class SelectionGatein extends AppCompatActivity {
             }
             case R.id.profileMenu:{
                 openProfil();
+            }
+            case R.id.HomeMenu:{
+                openSelection();
             }
         }
         return super.onOptionsItemSelected(item);

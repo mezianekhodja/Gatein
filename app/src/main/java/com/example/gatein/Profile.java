@@ -107,6 +107,11 @@ public class Profile extends AppCompatActivity {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
+    public void openSelection() {
+        finish();
+        Intent intent = new Intent(this, SelectionGatein.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
@@ -115,6 +120,9 @@ public class Profile extends AppCompatActivity {
             }
             case R.id.profileMenu:{
                 openProfil();
+            }
+            case R.id.HomeMenu:{
+                openSelection();
             }
         }
         return super.onOptionsItemSelected(item);

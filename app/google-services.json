@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1051158865929",
+    "firebase_url": "https://gatein-72035.firebaseio.com",
+    "project_id": "gatein-72035",
+    "storage_bucket": "gatein-72035.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051158865929:android:e965fc2607a88ad7e930d8",
+        "android_client_info": {
+          "package_name": "com.example.gatein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051158865929-el43rl2hibpkkmktlbrttnhr9nhiqapo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw2m8ZBeu1P5cwfewzU4GVmnHcsJ-9XIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051158865929-el43rl2hibpkkmktlbrttnhr9nhiqapo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

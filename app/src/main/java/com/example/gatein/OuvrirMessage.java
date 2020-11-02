@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -22,8 +23,19 @@ public class OuvrirMessage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ouvrir_message);
         message=(EditText) findViewById(R.id.editTextmessage);
-        ok=(Button) findViewById(R.id.button_message);
+        ok=(Button) findViewById(R.id.button_messageouv);
         firebaseAuth = FirebaseAuth.getInstance();
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivityOuverture();
+            }
+        });
+    }
+    public void openActivityOuverture() {
+        Intent intent = new Intent(this, OuverturePorte.class);
+        startActivity(intent);
+        OuvrirMessage.this.finish();
     }
     public void openActivityConnexion() {
         Intent intent = new Intent(this, MainActivity.class);

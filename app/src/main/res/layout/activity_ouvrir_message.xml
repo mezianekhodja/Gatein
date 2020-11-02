@@ -35,7 +35,7 @@
             android:textColorHint="@color/colorLogo"/>
 
         <Button
-            android:id="@+id/button_message"
+            android:id="@+id/button_messageouv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorYellow"

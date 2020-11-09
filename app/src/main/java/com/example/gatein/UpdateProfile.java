@@ -26,6 +26,7 @@ public class UpdateProfile extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private FirebaseUser firebaseUser;
     String horaires;
+    int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class UpdateProfile extends AppCompatActivity {
                 username.setText(userProfile.getUserName());
                 userphone.setText(userProfile.getUserPhone());
                 horaires = userProfile.getUserHoraires();
+                counter = userProfile.getUserCounter();
             }
 
             @Override
@@ -63,7 +65,7 @@ public class UpdateProfile extends AppCompatActivity {
                 String name = username.getText().toString();
                 String phone = userphone.getText().toString();
 
-                UserProfile userProfile = new UserProfile(name,firebaseUser.getEmail(),phone,horaires);
+                UserProfile userProfile = new UserProfile(name,firebaseUser.getEmail(),phone,horaires,counter);
 
                 databaseReference.setValue(userProfile);
                 openProfileActivity();

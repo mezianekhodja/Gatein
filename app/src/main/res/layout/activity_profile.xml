@@ -61,6 +61,12 @@
             android:layout_height="wrap_content"
             android:text="Horaires : ???"
             android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/tvProfilenombreDemandes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre Demandes : ???"
+            android:textColor="@color/colorWhite"/>
         <Button
             android:id="@+id/buttonUpdateProfile"
             android:layout_width="match_parent"

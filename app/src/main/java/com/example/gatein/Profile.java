@@ -24,7 +24,7 @@ public class Profile extends AppCompatActivity {
 
     private Button button;
     private ImageView profilPic;
-    private TextView profileName, profileMail, profilePhone, profileHoraires;
+    private TextView profileName, profileMail, profilePhone, profileHoraires,profileCounter;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
@@ -39,6 +39,7 @@ public class Profile extends AppCompatActivity {
         profileMail = (TextView)findViewById((R.id.tvProfilemail));
         profilePhone = (TextView)findViewById((R.id.tvProfilephone));
         profileHoraires = (TextView)findViewById((R.id.tvProfilehoraires));
+        profileCounter = (TextView)findViewById((R.id.tvProfilenombreDemandes));
 
         button = findViewById(R.id.buttonchangemdp);
         button.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +70,7 @@ public class Profile extends AppCompatActivity {
                 profileMail.setText("Mail = "+userProfile.getUserEmail());
                 profilePhone.setText("Phone = "+userProfile.getUserPhone());
                 profileHoraires.setText("Horaires = "+userProfile.getUserHoraires());
+                profileCounter.setText("Nombre de demandes = "+String.valueOf(userProfile.getUserCounter()));
             }
 
             @Override

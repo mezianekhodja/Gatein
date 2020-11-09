@@ -31,12 +31,14 @@ public class OuverturePorte extends AppCompatActivity {
     String username = "Undefined";
     private static final String KEY_USER = "user", KEY_DATE="date", KEY_MESSAGE="message";
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private FirebaseAuth firebaseAuth;
-    private FirebaseDatabase firebaseDatabase;
+    private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     String currentTime = Calendar.getInstance().getTime().toString();
     private static final String TAG = "OuverturePorte";
-    String horairesUser = "acces non autorisé";
+    String horairesUser = "acces non autorisé", phoneUser="Non défini",mailUser="Non défini";
     String reason;
+    int compteur=0;
+    final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,16 +55,15 @@ public class OuverturePorte extends AppCompatActivity {
             }
         });
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserProfile userProfile = snapshot.getValue(UserProfile.class);
                 username=userProfile.getUserName();
                 horairesUser=userProfile.getUserHoraires();
+                compteur=userProfile.getUserCounter();
+                mailUser=userProfile.getUserEmail();
+                phoneUser=userProfile.getUserPhone();
             }
 
             @Override
@@ -75,7 +76,7 @@ public class OuverturePorte extends AppCompatActivity {
 
     //si on souhaite charger
     public void loadNote(){
-        db.collection(username).document("1").get()
+        db.collection(username).document(String.valueOf(compteur-1)).get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -105,12 +106,15 @@ public class OuverturePorte extends AppCompatActivity {
         note.put(KEY_DATE,currentTime);
         note.put(KEY_MESSAGE,reason);
 
-            db.collection(username).document("1").set(note)
+            db.collection(username).document(String.valueOf(compteur)).set(note)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             textView.setText("Demande transmise : date : "+currentTime + ", user : "+username+", message  : "+ reason);
                             Toast.makeText(OuverturePorte.this, "Sucess", Toast.LENGTH_SHORT).show();
+                            compteur++;
+                            UserProfile userProfile = new UserProfile(username,mailUser,phoneUser,horairesUser,compteur);
+                            databaseReference.setValue(userProfile);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

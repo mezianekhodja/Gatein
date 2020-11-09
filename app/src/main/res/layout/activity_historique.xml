@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Historique"
+    android:background="@color/colorLogo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gatein by Abir, Blanche et Meziane, 2020"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/buttonafficheHist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultez vos 10 dernières demandes"
+            android:textColor="@color/colorLogo"
+            android:background="@color/colorYellow"/>
+
+        <TextView
+        android:id="@+id/textViewresHist1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultat 1 : Undefined"
+        android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 2 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 3 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 4 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 5 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 6 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 7 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 8 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 9 : Undefined"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/textViewresHist10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultat 10 : Undefined"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

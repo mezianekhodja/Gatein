@@ -30,6 +30,12 @@ public class SelectionGatein extends AppCompatActivity {
                 openMessage();
             }
         });
+        Historique.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHistorique();
+            }
+        });
 
     }
     public void openActivityConnexion() {
@@ -50,6 +56,12 @@ public class SelectionGatein extends AppCompatActivity {
     //ouvrir la page Message après la page selection
     public void openMessage(){
         Intent intent = new Intent(this, OuvrirMessage.class);
+        startActivity(intent);
+        SelectionGatein.this.finish();
+    }
+    //ouvrir la page historique après la page selection
+    public void openHistorique(){
+        Intent intent = new Intent(this, Historique.class);
         startActivity(intent);
         SelectionGatein.this.finish();
     }

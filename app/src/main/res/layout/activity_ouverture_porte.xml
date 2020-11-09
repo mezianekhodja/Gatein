@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OuverturePorte">
+    tools:context=".OuverturePorte"
+    android:background="@color/colorLogo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,11 +14,26 @@
         tools:layout_editor_absoluteX="154dp"
         tools:layout_editor_absoluteY="1dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gatein by Abir, Blanche et Meziane, 2020"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_marginBottom="10dp"/>
+
         <Button
             android:id="@+id/buttonLOADGate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOAD" />
+            android:text="LOAD"
+            android:textColor="@color/colorLogo"
+            android:background="@color/colorYellow"/>
 
         <TextView
             android:id="@+id/textViewresOP"
@@ -25,7 +41,8 @@
             android:layout_height="wrap_content"
             android:text="Undefined"
             tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="268dp" />
+            tools:layout_editor_absoluteY="268dp"
+            android:textColor="@color/colorWhite"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

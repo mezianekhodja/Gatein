@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".OuverturePorte">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="page O P"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="309dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/buttonLOADGate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOAD" />
+
+        <TextView
+            android:id="@+id/textViewresOP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undefined"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

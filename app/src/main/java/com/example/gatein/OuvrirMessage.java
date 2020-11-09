@@ -17,6 +17,7 @@ public class OuvrirMessage extends AppCompatActivity {
     private EditText message;
     private Button ok;
     private FirebaseAuth firebaseAuth;
+    private String reason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +29,17 @@ public class OuvrirMessage extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                reason = message.getText().toString();
+                if (reason.equals("")) {
+                    reason = "raison non définie";
+                }
                 openActivityOuverture();
             }
         });
     }
     public void openActivityOuverture() {
         Intent intent = new Intent(this, OuverturePorte.class);
+        intent.putExtra("raison",reason);
         startActivity(intent);
         OuvrirMessage.this.finish();
     }

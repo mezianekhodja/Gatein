@@ -35,7 +35,8 @@ public class OuverturePorte extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     String currentTime = Calendar.getInstance().getTime().toString();
     private static final String TAG = "OuverturePorte";
-    String message = "Undefined";
+    String horairesUser = "acces non autorisé";
+    String reason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class OuverturePorte extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserProfile userProfile = snapshot.getValue(UserProfile.class);
                 username=userProfile.getUserName();
+                horairesUser=userProfile.getUserHoraires();
             }
 
             @Override
@@ -70,14 +72,18 @@ public class OuverturePorte extends AppCompatActivity {
         });
 
     }
-    public void loadNote(){
 
-        db.collection("username").document("1").get()
+    //si on souhaite charger
+    public void loadNote(){
+        db.collection(username).document("1").get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if (documentSnapshot.exists()){
-                            //String scoreglob = documentSnapshot.get(KEY_MESSAGE).toString();
+                            String message = documentSnapshot.get(KEY_MESSAGE).toString();
+                            String date = documentSnapshot.get(KEY_DATE).toString();
+
+                            textView.setText("Date : "+date + "user : "+username+"message  : "+ message);
                         }
                         else{
                             Toast.makeText(OuverturePorte.this, "Fail", Toast.LENGTH_SHORT).show();
@@ -93,15 +99,17 @@ public class OuverturePorte extends AppCompatActivity {
                 });
     }
     public void saveNote() {
+        reason = getIntent().getExtras().getString("raison");
         Map<String, Object> note = new HashMap<>();
         note.put(KEY_USER,username);
         note.put(KEY_DATE,currentTime);
-        note.put(KEY_MESSAGE,message);
+        note.put(KEY_MESSAGE,reason);
 
             db.collection(username).document("1").set(note)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
+                            textView.setText("Demande transmise : date : "+currentTime + ", user : "+username+", message  : "+ reason);
                             Toast.makeText(OuverturePorte.this, "Sucess", Toast.LENGTH_SHORT).show();
                         }
                     })

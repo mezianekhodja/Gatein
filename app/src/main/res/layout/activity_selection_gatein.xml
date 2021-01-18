@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Ouvrir la porte"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:background="@color/colorYellow"
             android:textColor="@color/colorLogo"
             />
@@ -36,11 +36,22 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="100dp"
+            android:layout_marginTop="50dp"
             android:background="@color/colorYellow"
             android:text="Historique"
             android:textColor="@color/colorLogo"
 
+            />
+
+        <Button
+            android:id="@+id/buttonUrgences"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:background="@color/colorWhite"
+            android:text="Urgences"
+            android:textColor="@color/colorLogo"
             />
 
     </LinearLayout>
